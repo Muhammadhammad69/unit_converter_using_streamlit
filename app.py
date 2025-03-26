@@ -48,7 +48,8 @@ if main_unit != "Select Unit":
             if "e" in output_value:
                 point_value = output_value[output_value.index("e") + 2: len(output_value)]
                 print(point_value)
-                full_value = format(float(output_value), f".{point_value}f")
+                point_value_upgrade = int(point_value) + 3 if int(point_value) > 9 else int(point_value)
+                full_value = format(float(output_value), f".{str(point_value_upgrade)}f")
                 # print(full_value)
             full_value = f"=> ({full_value})" if len(full_value) > 0 else ""
             st.markdown(f"<div class='result-box'>{result['message']} {full_value}</div>", 

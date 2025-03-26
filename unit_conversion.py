@@ -37,11 +37,11 @@ def unit_conversion_func(unit_category, from_unit, to_unit, value):
     from_unit_symbol = ""
     to_unit_symbol = ""
     if unit_category == "temperature":
-        print("temperature")
+        # print("temperature")
         return convert_temperature(value, from_unit, to_unit)
     
     for unit in all_units:
-        print("tep")
+        # print("tep")
         if unit == unit_category:
             # print("unit")
             for sub_unit in all_units[unit]:
